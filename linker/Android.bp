@@ -168,6 +168,9 @@ cc_binary {
         },
         needs_platform_textrels: {
             cppflags: ["-DALLOW_PLATFORM_TEXTRELS"],
+	},
+        target_process_sdk_version_override: {
+            cppflags: ["-DSDK_VERSION_OVERRIDES=\"%s\""],
         },
         target_shim_libs: {
             cppflags: ["-DLD_SHIM_LIBS=\"%s\""],
